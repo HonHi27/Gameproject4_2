@@ -947,7 +947,7 @@ function creatPlayer () {
         ........cccccccc........
         `, SpriteKind.Player)
     controller.moveSprite(mySprite, 50, 0)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(68, 2))
+    tiles.placeOnRandomTile(mySprite, assets.tile`myTile34`)
     scene.cameraFollowSprite(mySprite)
     statusbar = statusbars.create(20, 4, StatusBarKind.Health)
     statusbar.attachToSprite(mySprite)
@@ -1037,10 +1037,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile28`, function (sprite, 
         game.reset()
     }
 })
-let RockFire: Sprite = null
 let FireClimbCenter: Sprite = null
 let FireClimbRight: Sprite = null
 let FireClimbLeft: Sprite = null
+let RockFire: Sprite = null
 let TrapLeft: Sprite = null
 let EarnCoin: Sprite = null
 let BurnE: Sprite = null
@@ -1141,6 +1141,35 @@ game.onUpdate(function () {
     }
 })
 game.onUpdateInterval(1500, function () {
+    let ishookshotactive = 0
+    if (!(ishookshotactive)) {
+        for (let valueblock of tiles.getTilesByType(assets.tile`myTile15`)) {
+            RockFire = sprites.create(img`
+                f c b d b f c d d c b c b d c f 
+                f c b d b f c d d c f c b d c f 
+                1 f d d d f b d d d f b d d f d 
+                . f c d d f b d d c f c d d f 1 
+                . f d d d f b d d c f d b b f . 
+                . 1 f b f d c d d d f f d f 1 . 
+                . . f b f d f 1 d f . f d f . . 
+                . . f b f . f d 1 f . f d f . . 
+                . . f f f . f b b f . f f f . . 
+                . . . f . . f b b f . . f . . . 
+                . . . f . . f f f f . . f . . . 
+                . . . f . . . f f . . . f . . . 
+                . . . . . . . f f . . . . . . . 
+                . . . . . . . f f . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                `, SpriteKind.RockFire)
+            tiles.placeOnRandomTile(RockFire, assets.tile`myTile15`)
+            RockFire.setFlag(SpriteFlag.DestroyOnWall, true)
+            RockFire.vx = 0
+            RockFire.vy = 200
+        }
+    }
+})
+game.onUpdateInterval(1500, function () {
     if (CLeft) {
         FireClimbLeft = sprites.createProjectileFromSprite(img`
             . . . . . . . . . . . . . . . . 
@@ -1204,35 +1233,6 @@ game.onUpdateInterval(1500, function () {
                 . . . . . . . . . . . . . . . . 
                 `, value, 0, 64)
             FireClimbCenter.setKind(SpriteKind.ClimbFire)
-        }
-    }
-})
-game.onUpdateInterval(1500, function () {
-    let ishookshotactive = 0
-    if (!(ishookshotactive)) {
-        for (let value of tiles.getTilesByType(assets.tile`myTile15`)) {
-            RockFire = sprites.create(img`
-                f c b d b f c d d c b c b d c f 
-                f c b d b f c d d c f c b d c f 
-                1 f d d d f b d d d f b d d f d 
-                . f c d d f b d d c f c d d f 1 
-                . f d d d f b d d c f d b b f . 
-                . 1 f b f d c d d d f f d f 1 . 
-                . . f b f d f 1 d f . f d f . . 
-                . . f b f . f d 1 f . f d f . . 
-                . . f f f . f b b f . f f f . . 
-                . . . f . . f b b f . . f . . . 
-                . . . f . . f f f f . . f . . . 
-                . . . f . . . f f . . . f . . . 
-                . . . . . . . f f . . . . . . . 
-                . . . . . . . f f . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                `, SpriteKind.RockFire)
-            tiles.placeOnRandomTile(RockFire, assets.tile`myTile15`)
-            RockFire.setFlag(SpriteFlag.DestroyOnWall, true)
-            RockFire.vx = 0
-            RockFire.vy = 200
         }
     }
 })

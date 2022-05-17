@@ -315,6 +315,25 @@ d d d d d b d d d d d d d b d d
 d d d d d b d d d d d d d b d d 
 b b b b b b b b b b b b b b b b 
 `;
+            case "image17":
+            case "myImage13":return img`
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 f f f f f f f f f f f f 1 1 
+1 f f f f f f f f f f f f f f 1 
+f 1 1 f f f f f f f f f f f f f 
+f 1 f 1 f 1 1 1 f 1 1 1 f 1 1 f 
+f 1 f 1 f 1 f 1 f 1 f 1 f 1 f f 
+f 1 1 f f 1 1 1 f 1 1 1 f 1 f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f 1 f f f f f f f 
+f f f f f f f 1 1 f f f f f f f 
+f f f f f f f f 1 f f f f f f f 
+f f f f f f f 1 1 1 f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f 
+`;
         }
         return null;
     })

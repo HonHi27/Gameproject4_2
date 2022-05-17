@@ -79,6 +79,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage12"
     },
+    "image17": {
+        "data": "hwQQABAAAAAR8f///////xEfEfH/////8R//8f/////x/xH///////H/////////8f8R8f/////x//Hx//////H/EfH/8fH/8f///x8R8f/x/xHx///x//H/8fH/////8f8R8f/////x//////////H/EfH/////Ef/x//////8R8f///////w==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage13"
+    },
     "anim3": {
         "namespace": "myAnimations",
         "id": "anim3",
