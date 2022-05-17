@@ -1,0 +1,44 @@
+{
+    "name": "Arcade's Team -1 - Copy #2",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "corgio": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.1",
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
+        "Sprite Grid": "github:microsoft/arcade-grid#v1.3.0",
+        "tilemaps": "github:microsoft/pxt-tilemaps#v1.12.0",
+        "character-animations": "github:riknoll/character-animations#v0.3.2",
+        "Untitled": "github:riknoll/arcade-platformer#93339dc3ab1a30498ddbf22ce6b4ed973b33a4f2",
+        "animation": "*",
+        "arcade-minimap": "github:microsoft/arcade-minimap#v0.6.1",
+        "sprite-scaling": "*",
+        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.1.0",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
+        "block-menu": "github:riknoll/arcade-custom-menu#v0.0.1",
+        "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "main.py",
+        "images.g.jres",
+        "images.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.8.23",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj"
+}
